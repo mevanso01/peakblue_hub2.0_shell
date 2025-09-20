@@ -1,5 +1,5 @@
 'use client'
-import { DESKING_UPDATE_EMBED_BASE } from '@/lib/coreapi'
+import { EMBED_BASE } from '@/lib/coreapi'
 import * as React from 'react'
 
 export default function DeskingPage() {
@@ -9,10 +9,10 @@ export default function DeskingPage() {
   const getOtp = async () => {
     try {
       const query = location.href.split('?')[1];
-      const res = await fetch('/api/desking-update/otp', { method: 'POST' })
+      const res = await fetch('/api/otp', { method: 'POST' })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'OTP error')
-      setSrc(`${DESKING_UPDATE_EMBED_BASE}?${query}&otp=${data.otp}`)
+      setSrc(`${EMBED_BASE}/desking-update-embed?${query}&otp=${data.otp}`)
     } catch (e: any) {
       setError(e.message)
     }
