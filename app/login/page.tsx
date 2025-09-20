@@ -15,7 +15,7 @@ const schema = z.object({
 })
 type FormValues = z.infer<typeof schema>
 
-export default function LoginPage() {
+function LoginPage() {
   const router = useRouter()
   const search = useSearchParams()
   const next = search.get('next') || '/app/desking'
@@ -150,4 +150,13 @@ export default function LoginPage() {
       </Card>
     </div>
   )
+}
+
+
+export default function LoginPageWrapper() {
+  return (
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <LoginPage />
+    </React.Suspense>
+  );
 }
