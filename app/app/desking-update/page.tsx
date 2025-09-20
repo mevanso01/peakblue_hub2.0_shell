@@ -36,7 +36,7 @@ export default function DeskingPage() {
       </div>
 
       {/* Iframe fills the rest */}
-      <console className="log">{src}</console>
+      <div>{src}</div>
       
       <div className="flex-1 overflow-hidden bg-muted/5">
         {error && <p className="text-red-600 p-4">{error}</p>}
