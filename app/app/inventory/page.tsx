@@ -8,10 +8,10 @@ export default function InventoryPage() {
 
   const getOtp = async () => {
     try {
-      const res = await fetch('/api/otp', { method: 'POST' })
+      const res = await fetch('/api/inventory/otp', { method: 'POST' })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'OTP error')
-      setSrc(`${EMBED_BASE}/inventory-embed?otp=${encodeURIComponent(data.otp)}`)
+      setSrc(data.embedUrl)
     } catch (e: any) {
       setError(e.message)
     }
