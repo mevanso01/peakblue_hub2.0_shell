@@ -6,6 +6,9 @@ import { FileSignature } from 'lucide-react'
 const items = [
   { href: '/app/desking', label: 'Desking', icon: FileSignature },
   { href: '/app/inventory', label: 'Inventory', icon: FileSignature },
+  { href: '/app/settings', label: 'Settings', icon: FileSignature },
+  { href: '/app/crm', label: 'CRM', icon: FileSignature },
+  { href: '/app/accounting', label: 'Accounting', icon: FileSignature },
 ]
 
 export default function Sidebar() {
