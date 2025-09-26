@@ -9,6 +9,9 @@ const items = [
   { href: '/app/settings', label: 'Settings', icon: FileSignature },
   { href: '/app/crm', label: 'CRM', icon: FileSignature },
   { href: '/app/accounting', label: 'Accounting', icon: FileSignature },
+  { href: '/app/contacts', label: 'Contacts', icon: FileSignature },
+  { href: '/app/credit', label: 'Credit', icon: FileSignature },
+  { href: '/app/report', label: 'Report', icon: FileSignature },
 ]
 
 export default function Sidebar() {
