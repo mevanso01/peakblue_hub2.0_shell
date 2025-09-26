@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import { FileSignature } from 'lucide-react'
 
 const items = [
+  { href: '/app/home', label: 'Home', icon: FileSignature },
   { href: '/app/desking', label: 'Desking', icon: FileSignature },
   { href: '/app/inventory', label: 'Inventory', icon: FileSignature },
   { href: '/app/settings', label: 'Settings', icon: FileSignature },
@@ -12,6 +13,14 @@ const items = [
   { href: '/app/contacts', label: 'Contacts', icon: FileSignature },
   { href: '/app/credit', label: 'Credit', icon: FileSignature },
   { href: '/app/report', label: 'Report', icon: FileSignature },
+  { href: '/app/marketing', label: 'Marketing', icon: FileSignature },
+  { href: '/app/website-utilities', label: 'Website Utilities', icon: FileSignature },
+  { href: '/app/marketing', label: 'Marketing', icon: FileSignature },
+  { href: '/app/dashboard', label: 'Dashboard', icon: FileSignature },
+  { href: '/app/craigslist-campaigns', label: 'Craigslist-Campaigns', icon: FileSignature },
+  { href: '/app/craigslist-manual-post', label: 'Craigslist-Manual Post', icon: FileSignature },
+  { href: '/app/craigslist-posted-ads', label: 'Craigslist-Posted ADS', icon: FileSignature },
+  
 ]
 
 export default function Sidebar() {

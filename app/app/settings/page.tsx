@@ -25,7 +25,7 @@ export default function SettingsPage() {
     <div className="flex flex-col flex-1 overflow-hidden">
       {/* Page header */}
       <div className="flex items-center justify-between border-b bg-background px-6 py-3">
-        <h1 className="text-lg font-semibold">Desking</h1>
+        <h1 className="text-lg font-semibold">Settings</h1>
         <button
           onClick={getOtp}
           className="rounded-md border px-3 py-1 text-sm hover:bg-muted"

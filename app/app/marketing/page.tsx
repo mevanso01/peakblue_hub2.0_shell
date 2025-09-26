@@ -2,13 +2,13 @@
 import { EMBED_BASE } from '@/lib/coreapi'
 import * as React from 'react'
 
-export default function ReportPage() {
+export default function MarketingPage() {
   const [src, setSrc] = React.useState<string | null>(null)
   const [error, setError] = React.useState<string | null>(null)
 
   const getOtp = async () => {
     try {
-      const res = await fetch('/api/report/otp', { method: 'POST' })
+      const res = await fetch('/api/marketing/otp', { method: 'POST' })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'OTP error')
       setSrc(data.embedUrl)
@@ -25,7 +25,7 @@ export default function ReportPage() {
     <div className="flex flex-col flex-1 overflow-hidden">
       {/* Page header */}
       <div className="flex items-center justify-between border-b bg-background px-6 py-3">
-        <h1 className="text-lg font-semibold">Report</h1>
+        <h1 className="text-lg font-semibold">Marketing</h1>
         <button
           onClick={getOtp}
           className="rounded-md border px-3 py-1 text-sm hover:bg-muted"
